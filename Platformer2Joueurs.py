@@ -10,7 +10,7 @@ from PIL import ImageGrab
 Jeu de plateforme deux joueurs
 Le but du jeu est de completer tous les tableaux en allant du portail bleu au portail orange
 """
-dict_levels={'tutorial':['poulpidou','snake','Zykouland','tuto 3 Spike','tuto5 keys','dash','discover'],
+dict_levels={'tutorial':['tuto 1 Go','tuto 2 Jump','tuto 3 Spike','tuto5 keys','dash','discover'],
              1:['gypso','laser and receptor','le_conseil_du_vieux_sage'],
              2:['poulpidou','maze (Press R to respawn)'],
              3:['snake','Zykouland']}
@@ -269,7 +269,7 @@ class Player:
 
         else:
 
-            level=eval(open(f'Levels/{level_name}.txt','r').read())
+            level=eval(open(f'{level_name}.txt','r').read())
             level=las.update_lasers(level,can_main,c_main)
             graph.can_update(can_main,['all','name','hearts'],level,c_main,x_can=x_can,y_can=y_can,level_name=level_name,list_players=list_players)
 
@@ -370,7 +370,7 @@ def platformer(level_n=None,demo=False,nb_players=1):
     list_levels=dict_to_list_level(dict_levels)
 
     level_name=list_levels[i_level]
-    level=eval(open(f'Levels/{level_name}.txt','r').read())
+    level=eval(open(f'{level_name}.txt','r').read())
 
     img_nb=0
     capt=False
@@ -882,7 +882,7 @@ def next_level():
     i_level+=1
     if i_level<=len(list_levels)-1:
         level_name=list_levels[i_level]
-        level=eval(open(f"Levels/{level_name}.txt",'r').read())
+        level=eval(open(f"{level_name}.txt",'r').read())
         portal_height=0
         portal_co=None
         for k in level.keys():

@@ -269,7 +269,7 @@ def done():
         dict_state[x_can,k]=['block']
 
     #Exporte le niveau
-    file_level=open(f'Levels/{level_nbr}.txt','w',encoding='utf8')
+    file_level=open(f'{level_nbr}.txt','w',encoding='utf8')
     print(dict_state,file=file_level)
 
 
