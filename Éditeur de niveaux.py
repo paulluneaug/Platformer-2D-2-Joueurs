@@ -313,14 +313,14 @@ def modif_level():
         try :
             inp=input('Ouvrir le niveau : ')
             print('inp=',inp)
-            dict_state=eval(open(f'Levels/{inp}.txt','r',encoding='utf8').read())
+            dict_state=eval(open(f'{inp}.txt','r',encoding='utf8').read())
             seek=False
         except FileNotFoundError:
             print("Ce fichier n'existe pas")
     graph.can_update(can_main,["all"],dict_state,c_main,grid_enable=grid_enable,x_can=x_can,y_can=y_can)
 
 def test_level():
-    print(dict_state,file=open('Levels/temp.txt','w',encoding='utf8'))
+    print(dict_state,file=open('temp.txt','w',encoding='utf8'))
     plat.platformer(level_n='temp')
 
 def right_click_main(event):

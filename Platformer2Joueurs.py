@@ -10,7 +10,7 @@ from PIL import ImageGrab
 Jeu de plateforme deux joueurs
 Le but du jeu est de completer tous les tableaux en allant du portail bleu au portail orange
 """
-dict_levels={'tutorial':['tuto 1 Go','tuto 2 Jump','tuto 3 Spike','tuto5 keys','dash','discover'],
+dict_levels={'tutorial':['tuto 1 Go','tuto 2 Jump','tuto 3 Spike','tuto5 keys'],
              1:['gypso','laser and receptor','le_conseil_du_vieux_sage'],
              2:['poulpidou','maze (Press R to respawn)'],
              3:['snake','Zykouland']}
@@ -430,7 +430,7 @@ def platformer(level_n=None,demo=False,nb_players=1):
 
     fen_plat.bind('<!>',lambda x:dash(0,0))
     fen_plat.bind('<a>',lambda x:dash(0,1))
-    fen_plat.bind('<r>',lambda x:respawn(0,0))
+    fen_plat.bind('<n>',lambda x:respawn(0,0))
     fen_plat.bind('<r>',lambda x:respawn(0,1))
     fen_plat.bind('<c>',capture)
 
@@ -1005,4 +1005,6 @@ def del_double(list0):
             list_return.append(e)
     return list_return
 
-platformer(demo=False,nb_players=2)
+if __name__ == "__main__":
+
+    platformer(demo=False,nb_players=2)

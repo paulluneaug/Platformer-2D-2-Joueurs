@@ -2,11 +2,10 @@
 Platformer 2D 2 Joueurs fait sur Python avec un ami, Luc40444, dans le cadre d'un projet scolaire
 
 Contrôles :
-Joueur 1 : Les flèches directionelles pour se déplacer et ! pour faire un dash
+Joueur 1 : Les flèches directionnelles pour se déplacer, ! pour faire un dash et n pour réapparaître au dernier checkpoint
 
-Joueur 2 : ZQSD pour se déplacer et a pour faire un dash
+Joueur 2 : ZQSD pour se déplacer, a pour faire un dash et r pour réapparaître au dernier checkpoint
 
-Si les deux joueurs sont bloqués, "r" fera réapparaître le deuxième joueur au dernier checkpoint
 Le but du jeu est de terminer tous les niveaux. Dans chaque tableau, le but est d'arriver au portail orange en partant du portail bleu.
 
 Au fil des tableaux, le personnage peut rencontrer de nombreux blocs différents:
@@ -31,7 +30,11 @@ Au fil des tableaux, le personnage peut rencontrer de nombreux blocs différents
 -Finalement, des récepteurs laser, pouvant, si un laser rentre en contact avec, activer un bouton, un interrupteur ou faire tourner un miroir particulier.
 
 
-Le jeu a été créé en parallèle avec un éditeur de niveau, 
-Cette éditeur a été utilisée pour développer le jeu et il contient donc tous les blocs possibles, vous pouvez donc vous même créer des niveaux en utilisant les blocs. Vous pouvez utiliser de la molette pour changer la couleur de certains blocs ou leur forme (direction miroir par exemple). N'oubliez pas aussi la liste de changements possible grâce au boutons et  autres entrées à droite des blocs (pour le channel d’un bouton par exemple). Bonne création !
+Le jeu a été créé en parallèle avec un éditeur de niveau,
+Cet éditeur a été utilisé pour développer le jeu et il contient donc tous les blocs possibles, vous pouvez donc vous même créer des niveaux en utilisant les blocs. Vous pouvez utiliser de la molette pour changer la couleur de certains blocs ou leur forme (direction miroir par exemple). N'oubliez pas aussi la liste de changements possible grâce au boutons et  autres entrées à droite des blocs (pour le channel d’un bouton par exemple). Bonne création !
 
 Une fois le niveau créé et nommé, il faut mettre son nom dans le dictionnaire au début du fichier "Platformer2Joueurs.py", dans la liste correspondant à la difficulté ressentie.
+
+
+
+
